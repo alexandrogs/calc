@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <fragment
+        android:id="@+id/nav_host_fragment_content_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+
+    <Button
+        android:id="@+id/blank_bottom"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text=""
+        app:backgroundTint="#FEFEFE"
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintLeft_toRightOf="@id/backspace"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/equals"
+        app:layout_goneMarginRight="@dimen/activity_horizontal_margin" />
+
+    <Button
+        android:id="@+id/equals"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text="="
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintLeft_toRightOf="@id/backspace"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/blank_bottom"
+        app:layout_constraintTop_toBottomOf="@id/plus"
+        app:layout_goneMarginRight="@dimen/activity_horizontal_margin" />
+
+    <Button
+        android:id="@+id/backspace"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text="<-"
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintLeft_toRightOf="@id/dot"
+        app:layout_constraintRight_toLeftOf="@id/equals"
+        app:layout_constraintBottom_toTopOf="@id/blank_bottom"
+        app:layout_constraintTop_toBottomOf="@id/plus"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <Button
+        android:id="@+id/dot"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text="."
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintLeft_toRightOf="@id/zero"
+        app:layout_constraintRight_toLeftOf="@id/backspace"
+        app:layout_constraintBottom_toTopOf="@id/blank_bottom"
+        app:layout_constraintTop_toBottomOf="@id/plus"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <Button
+        android:id="@+id/zero"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text="0"
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/dot"
+        app:layout_constraintBottom_toTopOf="@id/blank_bottom"
+        app:layout_constraintTop_toBottomOf="@id/plus"
+        app:layout_goneMarginLeft="@dimen/activity_horizontal_margin"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text="+"
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintLeft_toRightOf="@id/backspace"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minus"
+        app:layout_constraintBottom_toTopOf="@id/equals"
+        app:layout_goneMarginRight="@dimen/activity_horizontal_margin"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <Button
+        android:id="@+id/three"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text="3"
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintLeft_toRightOf="@id/dot"
+        app:layout_constraintRight_toLeftOf="@id/equals"
+        app:layout_constraintBottom_toTopOf="@id/backspace"
+        app:layout_constraintTop_toBottomOf="@id/six"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <Button
+        android:id="@+id/two"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text="2"
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintLeft_toRightOf="@id/zero"
+        app:layout_constraintRight_toLeftOf="@id/backspace"
+        app:layout_constraintBottom_toTopOf="@id/dot"
+        app:layout_constraintTop_toBottomOf="@id/five"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <Button
+        android:id="@+id/one"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text="1"
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/dot"
+        app:layout_constraintBottom_toTopOf="@id/zero"
+        app:layout_constraintTop_toBottomOf="@id/four"
+        app:layout_goneMarginLeft="@dimen/activity_horizontal_margin" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text="-"
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintLeft_toRightOf="@id/backspace"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vs"
+        app:layout_constraintBottom_toTopOf="@id/plus"
+        app:layout_goneMarginRight="@dimen/activity_horizontal_margin"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <Button
+        android:id="@+id/vs"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text="x"
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintLeft_toRightOf="@id/backspace"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divide"
+        app:layout_constraintBottom_toTopOf="@id/minus"
+        app:layout_goneMarginRight="@dimen/activity_horizontal_margin"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text="/"
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintLeft_toRightOf="@id/backspace"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blank_main"
+        app:layout_constraintBottom_toTopOf="@id/vs"
+        app:layout_goneMarginRight="@dimen/activity_horizontal_margin"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <Button
+        android:id="@+id/blank_main"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        app:backgroundTint="#FEFEFE"
+        android:text=""
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintBottom_toTopOf="@id/divide"
+        app:layout_constraintLeft_toRightOf="@id/backspace"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/history"
+        app:layout_goneMarginRight="@dimen/activity_horizontal_margin" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="@dimen/primary_item_side"
+        android:layout_height="@dimen/primary_item_side"
+        android:text=""
+        app:backgroundTint="#FEFEFE"
+        app:cornerRadius="@dimen/primary_item_radius"
+        app:layout_constraintBottom_toTopOf="@id/blank_main"
+        app:layout_constraintLeft_toRightOf="@id/backspace"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inserted"
+        app:layout_goneMarginRight="@dimen/activity_horizontal_margin" />
+
+    <TextView
+        android:id="@+id/inserted"
+        android:layout_width="match_parent"
+        android:layout_height="75.2dp"
+        android:text=""
+        app:layout_constraintLeft_toRightOf="@id/backspace"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/history" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
